@@ -71,6 +71,12 @@ kubectl get nodes
 kubectl get pods -n kube-system
 ```
 
+### How Kubernetes assigns same IP to all containers in a Pod
+```
+docker run -d --name pause --hostname pause k8s.gc.io/pause:3.2
+docker run -d --name nginx --network=container:pause nginx:1.18
+```
+
 ### Creating your first deployment
 ```
 kubectl create deployment nginx --image=nginx:1.18
