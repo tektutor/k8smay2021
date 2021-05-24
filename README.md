@@ -19,7 +19,7 @@ which minikube
 
 In case, minikube is already in path, you will get the below out
 ```
-/usr/local/bin/minikue
+/usr/local/bin/minikube
 ```
 
 In case, you are not getting the above output then make sure you type the below user normal user(non-root)
