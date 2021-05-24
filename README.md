@@ -37,3 +37,8 @@ source /home/user/.bashrc
 ```
 minikube start --driver=docker
 ```
+
+### Install kubectl to work with the K8s cluster
+```
+curl -LO https://dl.k8s.io/release/v1.21.0/bin/linux/amd64/kubectl
+```
