@@ -12,6 +12,11 @@ sudo yum-config-manager \
 sudo yum install docker-ce
 
 sudo systemctl enable docker && sudo systemctl start docker
+```
+
+Regular user(non-admin) user's will not have permission to issue docker commands by default, the below
+steps will added the 'user' into docker group.   Any user who is part of docker group will gain minimal root permissions to play with docker commands.
+```
 sudo usermod -aG docker user
 sudo su user
 ```
