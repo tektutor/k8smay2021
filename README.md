@@ -36,7 +36,7 @@ In case, minikube is already in path, you will get the below out
 /usr/local/bin/minikube
 ```
 
-In case, you are not getting the above output then make sure you type the below user normal user(non-root)
+In case, you are not getting the above output then make sure you type the below as a regular user(non-root)
 Edit the /home/user/.bashrc and append the below line at the end of the file
 ```
 export PATH=/usr/local/bin:$PATH
@@ -63,4 +63,75 @@ sudo mv ./kubectl /usr/local/bin
 ```
 kubectl get nodes
 kubectl get pods -n kube-system
+```
+
+### Creating your first deployment
+```
+kubectl create deployment nginx --image=nginx:1.18
+kubectl get deploy
+```
+
+### Scaling up the nginx deployment
+```
+kubectl scale deploy/nginx --replicas=4
+kubectl scale deploy/nginx --replicas=6
+```
+
+### Scaling down the nginx deployment
+```
+kubectl scale deploy/nginx --replicas=2
+kubectl scale deploy/nginx --replicas=0
+```
+
+### Listing all the user-plane pods
+```
+kubectl get pods
+kubectl get pod
+kubectl get po
+```
+
+### Listing pods in wide output format
+```
+kubectl get po -o wide
+```
+
+### Listing pods in watch mode
+```
+kubectl get po -o wide -w
+```
+
+### Getting inside a pod
+```
+kubectl exec -it mypod bash
+```
+
+### Listing all the deployments in default namespace
+```
+kubectl get deployments
+kubectl get deployment
+kubectl get deploy
+```
+
+### Listing all the replicasets in default namespace
+```
+kubectl get replicasets
+kubectl get replicaset
+kubectl get rs
+```
+
+### Listing all the pods in all namespaces
+```
+kubectl get po --all-namespaces
+```
+
+### Listing all resources in all namespaces
+```
+kubectl get all --all-namespaces
+```
+
+### Finding more details about deploy,rs,po
+```
+kubectl describe deploy/nginx
+kubectl describe rs/nginx-replicaset-name 
+kubectl describe pod/pod-name
 ```
