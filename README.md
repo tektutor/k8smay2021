@@ -11,6 +11,8 @@ sudo yum-config-manager \
 sudo yum install docker-ce
 
 sudo systemctl enable docker && sudo systemctl start docker
+sudo usermod -aG docker user
+sudo su user
 ```
 
 ### Let's download and install minikube as shown below
