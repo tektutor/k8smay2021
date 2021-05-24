@@ -32,3 +32,8 @@ In order to apply the recently added path settings, you need to run
 ```
 source /home/user/.bashrc
 ```
+
+### Starting minkube as regular user (non-root)
+```
+minikube start --driver=docker
+```
