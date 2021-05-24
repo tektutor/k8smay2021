@@ -41,4 +41,12 @@ minikube start --driver=docker
 ### Install kubectl to work with the K8s cluster
 ```
 curl -LO https://dl.k8s.io/release/v1.21.0/bin/linux/amd64/kubectl
+chmod +x ./kubectl
+mv ./kubectl /usr/local/bin
+```
+
+### Test if kubectl is able to communicate with Minikube cluster
+```
+kubectl get nodes
+kubectl get pods -n kube-system
 ```
