@@ -1,6 +1,19 @@
 # kubernetes-may-2021
 
-### Installing minikube
+## Installing minikube
+
+### Minikube requires Docker, hence let's install Docker Community Edition
+```
+sudo yum install -y yum-utils
+sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+sudo yum install docker-ce
+
+sudo systemctl enable docker && sudo systemctl start docker
+```
+
+### Let's download and install minikube as shown below
 ```
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-amd64
 sudo install minikube-darwin-amd64 /usr/local/bin/minikube
@@ -11,8 +24,7 @@ For detailed instruction, refer the below official page
 https://minikube.sigs.k8s.io/docs/start/
 ```
 
-### Make sure minikube is in path
-As regular user, type the below command
+### Make sure minikube is in path. As regular user, type the below command
 ```
 which minikube
 ```
