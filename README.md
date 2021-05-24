@@ -1,6 +1,7 @@
-# kubernetes-may-2021
+# Kubernetes - Day 1
 
 ## Installing minikube
+Minikube setup let's you create a light-weight Kubernetes cluster in your laptop/desktop.  Minikube doesn't require high-end machines and it works in Windows, Mac OS and Linux.
 
 ### Minikube requires Docker, hence let's install Docker Community Edition
 ```
