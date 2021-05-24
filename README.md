@@ -42,10 +42,10 @@ minikube start --driver=docker
 ```
 curl -LO https://dl.k8s.io/release/v1.21.0/bin/linux/amd64/kubectl
 chmod +x ./kubectl
-mv ./kubectl /usr/local/bin
+sudo mv ./kubectl /usr/local/bin
 ```
 
-### Test if kubectl is able to communicate with Minikube cluster
+### Test if kubectl is able to communicate with Minikube cluster as regular user
 ```
 kubectl get nodes
 kubectl get pods -n kube-system
